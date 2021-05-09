@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../src/style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/3fe177132c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         <div class="nav-center">
             <!-- nav header -->
             <div class="nav-header">
-                <img src="https://i.postimg.cc/76jNr6VY/1982637.jpg" class="logo" alt="logo" />
+                <img src="/src/image/logo.png" class="logo" alt="logo" />
                 <button class="nav-toggle">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -23,16 +24,16 @@
             <!-- links -->
             <ul class="links">
                 <li>
-                    <a href="index.html">home</a>
+                    <a href="index.php">home</a>
                 </li>
                 <li>
-                    <a href="about.html">about</a>
+                    <a href="about.php">about</a>
                 </li>
                 <li>
-                    <a href="projects.html">projects</a>
+                    <a href="service.php">services</a>
                 </li>
                 <li>
-                    <a href="contact.html">contact</a>
+                    <a href="contactus.php">contact</a>
                 </li>
             </ul>
             <!-- social media -->
@@ -45,21 +46,6 @@
                 <li>
                     <a href="https://www.twitter.com">
                         <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.twitter.com">
-                        <i class="fab fa-behance"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.twitter.com">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.twitter.com">
-                        <i class="fab fa-sketch"></i>
                     </a>
                 </li>
             </ul>
