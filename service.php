@@ -1,3 +1,10 @@
+<?php
+session_start();
+include("dbconnection.php");
+$sql = "select * From services";
+$servicesdata = $conn->query($sql);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,63 +80,30 @@
         <div class="row">
             <div class="col-1 ">
             </div>
+
             <div class="col-10">
                 <div class="row">
-                    <div class="col-3">
-                        <div class=" bg-card">
-                            <h3>Services</h3>
-                            <img src="src/image/1.jpg" alt="Trulli" width="100%">
-                            <p  class="category-text">Fineness</p>
-                            <h3>LKR. 250541.00</h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.</p>
-                                <a href="#" class="button button1">View</a>
+
+                    <?php
+                    foreach ($servicesdata as $key => $value) {
+                        # code...
+
+                    ?>
+                        <div class="col-3">
+                            <div class=" bg-card">
+                                <h3>  <?php echo $value['title'];  ?></h3>
+                                <img src="  <?php echo $value['image'];  ?>" alt="Trulli" width="100%">
+                                <p class="category-text">Fineness</p>
+                                <h3>LKR.   <?php echo $value['price'];  ?></h3>
+                                <p>  <?php echo $value['intro'];  ?></p>
+                                <a  href="serviceview.php?idvalue=<?php echo  $value['id'] ?>"  class="button button1">View</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class=" bg-card">
-                            <h3>Services</h3>
-                            <img src="src/image/1.jpg" alt="Trulli" width="100%">
-                            <p  class="category-text">Fineness</p>
-                            <h3>LKR. 250541.00</h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.</p>
-                                <a href="#" class="button button1">View</a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class=" bg-card">
-                            <h3>Services</h3>
-                            <img src="src/image/1.jpg" alt="Trulli" width="100%">
-                            <p  class="category-text">Fineness</p>
-                            <h3>LKR. 250541.00</h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.</p>
-                                <a href="#" class="button button1">View</a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class=" bg-card">
-                            <h3>Services</h3>
-                            <img src="src/image/1.jpg" alt="Trulli" width="100%">
-                            <p  class="category-text">Fineness</p>
-                            <h3>LKR. 250541.00</h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.</p>
-                                <a href="#" class="button button1">View</a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class=" bg-card">
-                            <h3>Services</h3>
-                            <img src="src/image/1.jpg" alt="Trulli" width="100%">
-                            <p  class="category-text">Fineness</p>
-                            <h3>LKR. 250541.00</h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.</p>
-                                <a href="#" class="button button1">View</a>
-                        </div>
-                    </div>
+
+                    <?php
+                    }
+                    ?>
+
                 </div>
             </div>
             <div class="col-1 "> </div>
