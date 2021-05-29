@@ -1,3 +1,31 @@
+<?php
+session_start();
+include("dbconnection.php");
+$idValue = $_GET['idvalue'];
+$sql = "select * From services where id=" . $idValue;
+if (!is_numeric($idValue)) 
+{ 
+  $_SESSION['danger'] = "Service not found";
+  header('location: adminservice.php');
+}
+$servicedata = $conn->query($sql);
+$hasValue = false;
+foreach ($servicedata as $key => $value) {
+  $hasValue = true;
+  $title = $value['title'];
+  $category = $value['category'];
+  $price = $value['price'];
+  $intro = $value['intro'];
+  $description = $value['description'];
+  $image = $value['image'];
+}
+if (!$hasValue) {
+  $_SESSION['danger'] = "Service not found";
+
+  header('location: service.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,20 +86,6 @@
             </ul>
         </div>
     </nav>
-    <section id="banner">
-        <div class="row">
-            <div class="col-1 ">
-            </div>
-            <div class="col-6">
-                <h1>Services</h1>
-                <div class="col-3">
-                    <p  class="category-text">Fineness</p>
-                </div>
-            </div>
-            <div class="col-1 "> </div>
-        </div>
-    </section>
-
     <section id="banner" style="background-color: rgb(243, 232, 219);">
         <div class="row">
             <div class="col-1 ">
@@ -79,31 +93,16 @@
             <div class="col-10">
                 <div class="row">
                     <div class="col-12" style="text-align: center;">
-                        <img src="src/image/1.jpg" alt="Trulli" width="100%">
+                        <img src="<?php echo $image;  ?>" alt="Trulli" width="100%" style="    max-height: 50vh;">
                     </div>
                     <div class="col-4"  >
-                        <h1>Services</h1>
-                        <p  class="category-text">Fineness</p>
-                        <h3>LKR. 250 541.00</h3>
+                        <h1><?php echo $title;  ?></h1>
+                        <p  class="category-text"><?php echo $category;  ?></p>
+                        <h3>LKR.<?php echo $price;  ?></h3>
                     </div>
                     <div class="col-12">
                         <div class=" bg-card">
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour.</p>
+                            <p><?php echo $description;  ?></p>
                         </div>
                     </div>
                 </div>
