@@ -1,0 +1,33 @@
+Group ID = MLB_01.02.04
+Batch No = 01.02
+Topic    = Online Fitness Trainer
+Project Link = 
+
+***Member 1*** 
+
+
+
+
+***Member 2***
+
+IT20615970
+Gunapala K. M. H. M. M
+0702650528
+IT20615970@my.sliit.lk
+
+***Management***
+
+*Service Management
+*ContactUs Management
+
+
+***Member 3***
+
+
+
+***Member 4***
+
+
+
+
+***Member 5***
