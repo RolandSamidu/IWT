@@ -36,10 +36,10 @@
                     <a href="contactus.php">contact</a>
                 </li>
                 <li>
-                    <a href="#">Sign Up</a>
+                    <a href="signup.php">Sign Up</a>
                 </li>
                 <li>
-                    <a href="#">Login </a>
+                    <a href="login.php">Login </a>
                 </li>
             </ul>
 
@@ -64,14 +64,14 @@
          </div>
          <div class="top-left"> <h3> Worrior Zone Fitness Training </h3> 
             <p> Our mision is to create and maintain healthy life of our customers.you can join with us and begin workout programs.Stay healthy enjoy life  </p>
-            <button class="button1"> <a href="#"> Book Now </a></button>
+            <button class="button1"> <a href="course.php"> Book Now </a></button>
 
          </div>
 
          <div class="division1">
              <h2> Fitness Classes</h2>
             <p class="p1"> Explore our courses and join today.. </p>
-            <button class="button2"> <a href="#"> Join Today </a></button>
+            <button class="button2"> <a href="course.php"> Join Today </a></button>
 
 
          </div>
@@ -79,7 +79,7 @@
          <div class="division2">
              <h3>Get Our Service</h3>
              <p class="p2"> We are here to your service..Explore oyr servicers.. </p>
-             <button class="button3"> <a href="#"> Explore Service </a></button>
+             <button class="button3"> <a href="service.php"> Explore Service </a></button>
 
          </div>
 
@@ -117,7 +117,7 @@
         
                 <div>
                     <i class="fa fa-phone"></i>
-                    <p>+1.555.555.5555</p>
+                    <p>+11111111111</p>
                 </div>
         
                 <div>
